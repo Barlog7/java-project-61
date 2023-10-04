@@ -3,4 +3,8 @@
 
 <a href="https://codeclimate.com/github/Barlog7/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/cc9fdb240d87903fa67c/maintainability" /></a>
 
+Первая игра "Проверка на чётность"
 https://asciinema.org/a/U6h3cIwL5AfvUbNNMbK5EVlar
+
+Вторая игра "Калькулятор"
+https://asciinema.org/a/o2V8K7W2ap7GWVqqiPWe3nJMy
