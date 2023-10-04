@@ -39,7 +39,7 @@ public class Calc {
     }
     public static String getnumrandomSign() {
         Random random = new Random();
-        int ranNumber = random.nextInt(2);
+        int ranNumber = random.nextInt(3);
         if (ranNumber == 0) {
             return "+";
         } else if (ranNumber == 1) {
