@@ -10,6 +10,7 @@ public class App {
         String sGreet = "1";
         String sEven = "2";
         String sCalc = "3";
+        String sExit = "0";
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -21,7 +22,11 @@ public class App {
         //scannerApp.close();
         System.out.println("Your choice:" + userChoice);
         String nameUser = "";
-        nameUser = Cli.hello(scannerApp);
+        if (!userChoice.equals(sExit)) {
+            nameUser = Cli.hello(scannerApp);
+            Engine.game(nameUser, scannerApp, userChoice);
+        }
+
         /*if (userChoice.equals(sGreet)) {
             System.out.println("Welcome to the Brain Games!");
             Cli.hello(scannerApp);
@@ -29,7 +34,7 @@ public class App {
             nameUser = Cli.hello(scannerApp);
             Even.game(nameUser, scannerApp);
         }*/
-        Engine.game(nameUser, scannerApp, userChoice);
+
         scannerApp.close();
         /*else {
             return;
