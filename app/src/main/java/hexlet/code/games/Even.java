@@ -1,11 +1,16 @@
-package hexlet.code;
+package hexlet.code.games;
 import java.util.Scanner;
-import java.util.Random;
+//import java.util.Random;
+
+import static hexlet.code.Engine.getnumrandom;
+
 public class Even {
-    public static void game(String nameUser, Scanner sc) {
+    private static String startMessage = "'yes' if the number is even, otherwise answer 'no'.";
+
+   /* public static void game(String nameUser, Scanner sc) {
         int countGames = 3;
         int result = 0;
-        System.out.println("'yes' if the number is even, otherwise answer 'no'.");
+        //System.out.println("'yes' if the number is even, otherwise answer 'no'.");
         for (int i = 1; i <= countGames; i++) {
             result = gameround(nameUser, sc);
             //countGames++;
@@ -14,7 +19,7 @@ public class Even {
             }
         }
         System.out.println("Congratulations, " + nameUser + "!");
-    }
+    }*/
     public static int gameround(String nameUser, Scanner scround) {
         int i = 0;
         int ranNumber = getnumrandom();
@@ -42,10 +47,9 @@ public class Even {
             return "no";
         }
     }
-    public static int getnumrandom() {
-        Random random = new Random();
-        int ranNumber = random.nextInt(100);
-        return ranNumber;
+    public static String getStartMessage() {
+        return startMessage;
     }
+
 }
 
