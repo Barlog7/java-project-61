@@ -8,3 +8,6 @@ https://asciinema.org/a/U6h3cIwL5AfvUbNNMbK5EVlar
 
 Вторая игра "Калькулятор"
 https://asciinema.org/a/o2V8K7W2ap7GWVqqiPWe3nJMy
+
+Третья игра "НОД"
+https://asciinema.org/a/LjFVZliH3AubCkvw9DEyhiA03
