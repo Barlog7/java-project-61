@@ -36,7 +36,7 @@ public class GCD {
         int count = Math.max(number1, number2);
         int nod = 1;
         for (int i = 2; i <= count; i++) {
-            if (number1 % i == 0 && number2 % i ==0) {
+            if (number1 % i == 0 && number2 % i == 0) {
                 nod = i;
             }
         }
