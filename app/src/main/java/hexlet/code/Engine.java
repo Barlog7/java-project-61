@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Cli;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -30,6 +31,10 @@ public class Engine {
                 case "3" :
                     startMessege(Calc.getStartMessage());
                     result = Calc.gameround(nameUser, sc);
+                    break;
+                case "4" :
+                    startMessege(GCD.getStartMessage());
+                    result = GCD.gameround(nameUser, sc);
                     break;
                 default:
                     break;
