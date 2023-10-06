@@ -11,3 +11,6 @@ https://asciinema.org/a/o2V8K7W2ap7GWVqqiPWe3nJMy
 
 Третья игра "НОД"
 https://asciinema.org/a/LjFVZliH3AubCkvw9DEyhiA03
+
+Четвертая игра "Арифметическая прогрессия"
+https://asciinema.org/a/yqk1RTLIwPXGS5Gf470FU5fJz
