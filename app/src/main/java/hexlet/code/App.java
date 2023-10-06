@@ -10,6 +10,8 @@ public class App {
         String sGreet = "1";
         String sEven = "2";
         String sCalc = "3";
+        String sGCD = "4";
+        String sProgression = "5";
         String sExit = "0";
 
         System.out.println("Please enter the game number and press Enter.");
@@ -17,6 +19,7 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
         Scanner scannerApp = new Scanner(System.in);
         String userChoice = scannerApp.next();

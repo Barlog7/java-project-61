@@ -4,6 +4,7 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.Cli;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -25,16 +26,20 @@ public class Engine {
                     Cli.hello(sc);
                     break;
                 case "2" :
-                    startMessege(Even.getStartMessage());
+                    startMessege(Even.getStartMessage(), i);
                     result = Even.gameround(nameUser, sc);
                     break;
                 case "3" :
-                    startMessege(Calc.getStartMessage());
+                    startMessege(Calc.getStartMessage(), i);
                     result = Calc.gameround(nameUser, sc);
                     break;
                 case "4" :
-                    startMessege(GCD.getStartMessage());
+                    startMessege(GCD.getStartMessage(), i);
                     result = GCD.gameround(nameUser, sc);
+                    break;
+                case "5" :
+                    startMessege(Progression.getStartMessage(), i);
+                    result = Progression.gameround(nameUser, sc);
                     break;
                 default:
                     break;
@@ -54,8 +59,10 @@ public class Engine {
     }
 
 
-    public static void startMessege(String strMessage) {
-        System.out.println(strMessage);
+    public static void startMessege(String strMessage, int i) {
+        if (i == 1) {
+            System.out.println(strMessage);
+        }
     }
     public static void messageQ(String strMessage) {
         System.out.println(messegeQ + strMessage);
@@ -73,6 +80,11 @@ public class Engine {
     public static int getnumrandom() {
         Random random = new Random();
         int ranNumber = random.nextInt(100);
+        return ranNumber;
+    }
+    public static int getnumrandom(int maxnamber) {
+        Random random = new Random();
+        int ranNumber = random.nextInt(maxnamber) + 1;
         return ranNumber;
     }
 }
