@@ -14,3 +14,6 @@ https://asciinema.org/a/LjFVZliH3AubCkvw9DEyhiA03
 
 Четвертая игра "Арифметическая прогрессия"
 https://asciinema.org/a/yqk1RTLIwPXGS5Gf470FU5fJz
+
+Пятая игра "Простое ли число?"
+https://asciinema.org/a/wESPao2izea1czBPIqwgB5qC0
