@@ -1,10 +1,11 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
 import hexlet.code.games.Cli;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.Prime;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -41,12 +42,14 @@ public class Engine {
                     startMessege(Progression.getStartMessage(), i);
                     result = Progression.gameround(nameUser, sc);
                     break;
+                case "6" :
+                    startMessege(Prime.getStartMessage(), i);
+                    result = Prime.gameround(nameUser, sc);
+                    break;
                 default:
                     break;
             }
-            //result = gameR.gameround(nameUser, sc);
-            //countGames++;
-            //resultMessage(result, nameUser);
+
             if (result == 0) {
                 return;
             }
