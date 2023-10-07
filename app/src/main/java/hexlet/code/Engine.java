@@ -6,6 +6,7 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.Prime;
+//import hexlet.code.App;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -13,6 +14,8 @@ import java.util.Scanner;
 //import static hexlet.code.games.Cli.hello;
 
 public class Engine {
+
+
     private static String messegeQ = "Question: ";
     private static String messegeA = "Your answer: ";
     private static String messegeCorr = "Correct!";
@@ -20,29 +23,36 @@ public class Engine {
     private static int countGames = 3;
     public static void game(String nameUser, Scanner sc, String userChoice) {
         //startMessege(GameRound.startMessage);
+
+        final String sGreet = "1";
+        final String sEven = "2";
+        final String sCalc = "3";
+        final String sGCD = "4";
+        final String sProgression = "5";
+        final String sPrime = "6";
         int result = 0;
         for (int i = 1; i <= countGames; i++) {
             switch (userChoice) {
-                case "1" :
+                case sGreet:
                     Cli.hello(sc);
                     break;
-                case "2" :
+                case sEven :
                     startMessege(Even.getStartMessage(), i);
                     result = Even.gameround(nameUser, sc);
                     break;
-                case "3" :
+                case sCalc :
                     startMessege(Calc.getStartMessage(), i);
                     result = Calc.gameround(nameUser, sc);
                     break;
-                case "4" :
+                case sGCD :
                     startMessege(GCD.getStartMessage(), i);
                     result = GCD.gameround(nameUser, sc);
                     break;
-                case "5" :
+                case sProgression :
                     startMessege(Progression.getStartMessage(), i);
                     result = Progression.gameround(nameUser, sc);
                     break;
-                case "6" :
+                case sPrime :
                     startMessege(Prime.getStartMessage(), i);
                     result = Prime.gameround(nameUser, sc);
                     break;

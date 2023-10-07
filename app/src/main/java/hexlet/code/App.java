@@ -6,12 +6,8 @@ import hexlet.code.games.Cli;
 import java.util.Scanner;
 
 public class App {
+
     public static void main(String[] args) {
-        String sGreet = "1";
-        String sEven = "2";
-        String sCalc = "3";
-        String sGCD = "4";
-        String sProgression = "5";
         String sExit = "0";
 
         System.out.println("Please enter the game number and press Enter.");
