@@ -2,13 +2,17 @@
 [![Actions Status](https://github.com/Barlog7/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Barlog7/java-project-61/actions)
 
 <a href="https://codeclimate.com/github/Barlog7/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/cc9fdb240d87903fa67c/maintainability" /></a>
+
 Игры разума
+
 Номер 0 -  выход из программы
 Номер 1 - приветствие.
+
 
 остальные номера для выбора запускают игры.
 В каждой игре три раунда. Для того чтобы выиграть нужно пройти всё раунды.
 Ошибка в любом раунде приводит к концу игры.
+
 
 Номер 2 - Первая игра "Проверка на чётность"
 Если число является четным напишите 'yes', если нечетным то 'no'
