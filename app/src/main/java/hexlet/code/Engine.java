@@ -14,8 +14,7 @@ public class Engine {
     private static String messegeQ = "Question: ";
     private static String messegeA = "Your answer: ";
     private static String messegeCorr = "Correct!";
-    //private static String messegeErr = "Correct!";
-    //private static int countGames = 3;
+
 
     public static void enganeGame(Scanner sc, String startText, String[] arrQuestion, String[] arrAnswer) {
         String userName = Cli.hello(sc);
@@ -42,11 +41,7 @@ public class Engine {
     }
 
 
-    /*public static void startMessege(String strMessage, int i) {
-        if (i == 1) {
-            System.out.println(strMessage);
-        }
-    }*/
+
     public static void messageQ(String strMessage) {
         System.out.println(messegeQ + strMessage);
     }

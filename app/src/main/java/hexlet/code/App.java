@@ -36,8 +36,7 @@ public class App {
 
         String nameUser = "";
         if (!userChoice.equals(sExit)) {
-            //nameUser = Cli.hello(scannerApp);
-            //Engine.game(nameUser, scannerApp, userChoice);
+
             System.out.println("Welcome to the Brain Games!");
             switch (userChoice) {
                 case sGreet:

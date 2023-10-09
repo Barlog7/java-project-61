@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 import static hexlet.code.Engine.enganeGame;
-import static hexlet.code.Engine.getnumrandom;
+
 
 public class Prime {
     public static void game(Scanner sc) {
@@ -15,7 +15,7 @@ public class Prime {
         String[] arrAnswer = new String[3];
         for (int i = 0; i < arrQuestion.length; i++) {
             int checkNumber = Engine.getnumrandom();
-            int numberQuestion = getnumrandom();
+
             arrQuestion[i] = String.valueOf(checkNumber);
             arrAnswer[i] = askSimple(checkNumber);
         }
