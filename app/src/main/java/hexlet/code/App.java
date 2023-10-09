@@ -1,7 +1,12 @@
 package hexlet.code;
 
 import hexlet.code.games.Cli;
-//import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
+
 
 import java.util.Scanner;
 
@@ -9,6 +14,13 @@ public class App {
 
     public static void main(String[] args) {
         String sExit = "0";
+
+        final String sGreet = "1";
+        final String sEven = "2";
+        final String sCalc = "3";
+        final String sGCD = "4";
+        final String sProgression = "5";
+        final String sPrime = "6";
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -18,37 +30,41 @@ public class App {
         System.out.println("5 - Progression");
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
+        System.out.print("Your choice:");
         Scanner scannerApp = new Scanner(System.in);
         String userChoice = scannerApp.next();
-        //scannerApp.close();
-        System.out.println("Your choice:" + userChoice);
+
         String nameUser = "";
         if (!userChoice.equals(sExit)) {
-            nameUser = Cli.hello(scannerApp);
-            Engine.game(nameUser, scannerApp, userChoice);
+            //nameUser = Cli.hello(scannerApp);
+            //Engine.game(nameUser, scannerApp, userChoice);
+            System.out.println("Welcome to the Brain Games!");
+            switch (userChoice) {
+                case sGreet:
+                    Cli.hello(scannerApp);
+                    break;
+                case sEven :
+                    Even.game(scannerApp);
+                    break;
+                case sCalc :
+                    Calc.game(scannerApp);
+                    break;
+                case sGCD :
+                    GCD.game(scannerApp);
+                    break;
+                case sProgression :
+                    Progression.game(scannerApp);
+                    break;
+                case sPrime :
+                    Prime.game(scannerApp);
+                    break;
+                default:
+                    break;
+            }
+
         }
 
-        /*if (userChoice.equals(sGreet)) {
-            System.out.println("Welcome to the Brain Games!");
-            Cli.hello(scannerApp);
-        } else if (userChoice.equals(sEven)) {
-            nameUser = Cli.hello(scannerApp);
-            Even.game(nameUser, scannerApp);
-        }*/
-
         scannerApp.close();
-        /*else {
-            return;
-        }*/
-
-
-       /* Scanner scanner = new Scanner(System.in);
-        System.out.println("May I have your name?");
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-
-        scanner.close();*/
-
 
     }
 

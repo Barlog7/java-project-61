@@ -4,28 +4,25 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
+import static hexlet.code.Engine.enganeGame;
+import static hexlet.code.Engine.getnumrandom;
+
 public class Prime {
-    private static String startMessage = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static int gameround(String nameUser, Scanner sc) {
-        int i = 0;
-        int checkNumber = Engine.getnumrandom();
-
-        String messQ = String.valueOf(checkNumber);
-        Engine.messageQ(messQ);
-        String anser = askSimple(checkNumber);
-
-        String userAnser = sc.next();
-        userAnser = userAnser.toLowerCase();
-        Engine.messageA(userAnser);
-        if (anser.equals(userAnser)) {
-            i = 1;
-            Engine.messageCorr();
-        } else {
-            Engine.messageErr(userAnser, anser, nameUser);
+    public static void game(Scanner sc) {
+        //int countGames = 3;
+        String startMessage = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        String[] arrQuestion = new String[3];
+        String[] arrAnswer = new String[3];
+        for (int i = 0; i < arrQuestion.length; i++) {
+            int checkNumber = Engine.getnumrandom();
+            int numberQuestion = getnumrandom();
+            arrQuestion[i] = String.valueOf(checkNumber);
+            arrAnswer[i] = askSimple(checkNumber);
         }
-        return i;
+        enganeGame(sc, startMessage, arrQuestion, arrAnswer);
 
     }
+
 
     public static String askSimple(Integer number) {
         if (number < 2) {
@@ -38,7 +35,5 @@ public class Prime {
         }
         return "yes";
     }
-    public static String getStartMessage() {
-        return startMessage;
-    }
+
 }

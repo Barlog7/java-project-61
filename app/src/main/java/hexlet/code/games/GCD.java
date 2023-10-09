@@ -4,31 +4,25 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
+import static hexlet.code.Engine.enganeGame;
+
+
 public class GCD {
-    private static String startMessage = "Find the greatest common divisor of given numbers.";
 
-    public static int gameround(String nameUser, Scanner sc) {
-        int i = 0;
-        int ranNumber1 = Engine.getnumrandom();
-        int ranNumber2 = Engine.getnumrandom();
-        //int sum = ranNumber1 + ranNumber2;
-        //String sign = getnumrandomSign();
-        int resultNumber = getNod(ranNumber1, ranNumber2);
+    public static void game(Scanner sc) {
+        //int countGames = 3;
+        String startMessage = "Find the greatest common divisor of given numbers.";
+        String[] arrQuestion = new String[3];
+        String[] arrAnswer = new String[3];
+        for (int i = 0; i < arrQuestion.length; i++) {
+            int ranNumber1 = Engine.getnumrandom();
+            int ranNumber2 = Engine.getnumrandom();
 
-        String anser = String.valueOf(resultNumber);
-        //String formula = ranNumber1 + sign + ranNumber2;
-        String messQ = ranNumber1 + " " + ranNumber2;
-        Engine.messageQ(messQ);
-        //System.out.println(messQ);
-        String userAnser = sc.next();
-        Engine.messageA(userAnser);
-        if (anser.equals(userAnser)) {
-            i = 1;
-            Engine.messageCorr();
-        } else {
-            Engine.messageErr(userAnser, anser, nameUser);
+            int resultNumber = getNod(ranNumber1, ranNumber2);
+            arrQuestion[i] = ranNumber1 + " " + ranNumber2;
+            arrAnswer[i] = String.valueOf(resultNumber);
         }
-        return i;
+        enganeGame(sc, startMessage, arrQuestion, arrAnswer);
 
     }
 
@@ -43,7 +37,5 @@ public class GCD {
         return nod;
     }
 
-    public static String getStartMessage() {
-        return startMessage;
-    }
+
 }
