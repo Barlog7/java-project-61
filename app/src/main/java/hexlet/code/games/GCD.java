@@ -10,7 +10,7 @@ import static hexlet.code.Engine.enganeGame;
 public class GCD {
 
     public static void game(Scanner sc) {
-        int countGames = 3;
+        final int countGames = 3;
         String startMessage = "Find the greatest common divisor of given numbers.";
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];

@@ -19,7 +19,7 @@ public class Engine {
     public static void enganeGame(Scanner sc, String startText, String[] arrQuestion, String[] arrAnswer) {
         String userName = Cli.hello(sc);
         System.out.println(startText);
-        int countGames = 3;
+        final int countGames = 3;
         for (int i = 0; i < countGames; i++) {
             String anser = arrAnswer[i];
             String textQestion = arrQuestion[i];
@@ -57,7 +57,7 @@ public class Engine {
     }
     public static int getnumrandom() {
         Random random = new Random();
-        int numberMax = 100;
+        final int numberMax = 100;
         int ranNumber = random.nextInt(numberMax);
         return ranNumber;
     }

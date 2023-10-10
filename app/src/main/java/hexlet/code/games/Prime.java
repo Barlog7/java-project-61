@@ -9,7 +9,7 @@ import static hexlet.code.Engine.enganeGame;
 
 public class Prime {
     public static void game(Scanner sc) {
-        int countGames = 3;
+        final int countGames = 3;
         String startMessage = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];
