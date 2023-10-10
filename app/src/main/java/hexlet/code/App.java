@@ -33,8 +33,8 @@ public class App {
         System.out.print("Your choice:");
         Scanner scannerApp = new Scanner(System.in);
         String userChoice = scannerApp.next();
-
-        String nameUser = "";
+        System.out.println(" ");
+        //String nameUser = "";
         if (!userChoice.equals(sExit)) {
 
             System.out.println("Welcome to the Brain Games!");
