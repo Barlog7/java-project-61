@@ -8,9 +8,10 @@ import static hexlet.code.Engine.getnumrandom;
 public class Even {
 
     public static void game(Scanner sc) {
+        int countGames = 3;
         String startMessage = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[] arrQuestion = new String[3];
-        String[] arrAnswer = new String[3];
+        String[] arrQuestion = new String[countGames];
+        String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
             int numberQuestion = getnumrandom();
             arrQuestion[i] = String.valueOf(numberQuestion);

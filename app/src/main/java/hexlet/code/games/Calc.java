@@ -11,9 +11,10 @@ import static hexlet.code.Engine.enganeGame;
 public class Calc {
 
     public static void game(Scanner sc) {
+        int countGames = 3;
         String startMessage = "What is the result of the expression?";
-        String[] arrQuestion = new String[3];
-        String[] arrAnswer = new String[3];
+        String[] arrQuestion = new String[countGames];
+        String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
             int ranNumber1 = Engine.getnumrandom();
             int ranNumber2 = Engine.getnumrandom();
@@ -29,7 +30,8 @@ public class Calc {
 
     public static String getnumrandomSign() {
         Random random = new Random();
-        int ranNumber = random.nextInt(3);
+        int countSign =3;
+        int ranNumber = random.nextInt(countSign);
         if (ranNumber == 0) {
             return "+";
         } else if (ranNumber == 1) {

@@ -57,7 +57,8 @@ public class Engine {
     }
     public static int getnumrandom() {
         Random random = new Random();
-        int ranNumber = random.nextInt(100);
+        int numberMax = 100;
+        int ranNumber = random.nextInt(numberMax);
         return ranNumber;
     }
     public static int getnumrandom(int maxnamber) {

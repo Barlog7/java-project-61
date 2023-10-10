@@ -9,15 +9,18 @@ import static hexlet.code.Engine.enganeGame;
 
 public class Progression {
     public static void game(Scanner sc) {
-        //int countGames = 3;
+        int countGames = 3;
+        int changeProgressionStepMax = 10;
+        int minLength = 5;
+        int maxLength = 5;
         String startMessage =  "What number is missing in the progression?";
-        String[] arrQuestion = new String[3];
-        String[] arrAnswer = new String[3];
+        String[] arrQuestion = new String[countGames];
+        String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
 
             int startNumber = Engine.getnumrandom();
-            int progressionNumber = Engine.getnumrandom(10);
-            int progressionLength = 5 + Engine.getnumrandom(5);
+            int progressionNumber = Engine.getnumrandom(changeProgressionStepMax);
+            int progressionLength = minLength + Engine.getnumrandom(maxLength);
             int hidenumberPoz = Engine.getnumrandom(progressionLength);
             int hidenumber = 0;
             var result = new StringBuilder();
