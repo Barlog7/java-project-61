@@ -19,7 +19,7 @@ public class Calc {
             int ranNumber2 = Engine.getnumrandom();
             String sign = getnumrandomSign();
             int resultNumber = resultFormula(ranNumber1, ranNumber2, sign);
-            arrQuestion[i] = ranNumber1 + sign + ranNumber2;
+            arrQuestion[i] = ranNumber1 + " " + sign + " " + ranNumber2;
             arrAnswer[i] = String.valueOf(resultNumber);
         }
         enganeGame(sc, startMessage, arrQuestion, arrAnswer);
