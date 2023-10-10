@@ -9,10 +9,10 @@ import static hexlet.code.Engine.enganeGame;
 
 public class Progression {
     public static void game(Scanner sc) {
-        int countGames = 3;
-        int changeProgressionStepMax = 10;
-        int minLength = 5;
-        int maxLength = 5;
+        final int countGames = 3;
+        final int changeProgressionStepMax = 10;
+        final int minLength = 5;
+        final int maxLength = 5;
         String startMessage =  "What number is missing in the progression?";
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];
