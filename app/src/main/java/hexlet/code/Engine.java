@@ -13,7 +13,11 @@ public class Engine {
 
 
     public static void runGame(Scanner sc, String startText, String[] arrQuestion, String[] arrAnswer) {
-        String userName = Cli.greetings(sc);
+        //String userName = Cli.greetings(sc);
+        System.out.print("May I have your name? ");
+        String userName = sc.next();
+        System.out.println("Hello, " + userName + "!");
+
         System.out.println(startText);
         final int countGames = 3;
         for (int i = 0; i < countGames; i++) {

@@ -37,7 +37,7 @@ public class App {
         System.out.println("Welcome to the Brain Games!");
         switch (userChoice) {
             case sGreet:
-                Cli.greetings(scannerApp);
+                Cli.greetings();
                 break;
             case sEven :
                 Even.game(scannerApp);
