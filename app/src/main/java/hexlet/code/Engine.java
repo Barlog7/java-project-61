@@ -17,7 +17,7 @@ public class Engine {
 
 
     public static void enganeGame(Scanner sc, String startText, String[] arrQuestion, String[] arrAnswer) {
-        String userName = Cli.hello(sc);
+        String userName = Cli.greetings(sc);
         System.out.println(startText);
         final int countGames = 3;
         for (int i = 0; i < countGames; i++) {
