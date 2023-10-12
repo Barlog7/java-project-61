@@ -1,17 +1,15 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Scanner;
-
 import static hexlet.code.Engine.runGame;
 
 
 public class GCD {
+    private static final  String STARTMESSAGE = "Find the greatest common divisor of given numbers.";
 
     public static void game(Scanner sc) {
         final int countGames = 3;
-        String startMessage = "Find the greatest common divisor of given numbers.";
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
@@ -22,7 +20,7 @@ public class GCD {
             arrQuestion[i] = ranNumber1 + " " + ranNumber2;
             arrAnswer[i] = String.valueOf(resultNumber);
         }
-        runGame(sc, startMessage, arrQuestion, arrAnswer);
+        runGame(sc, STARTMESSAGE, arrQuestion, arrAnswer);
 
     }
 

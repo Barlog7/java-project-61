@@ -9,10 +9,10 @@ import static hexlet.code.Engine.runGame;
 
 
 public class Calc {
-
+    private static final  String STARTMESSAGE = "What is the result of the expression?";
     public static void game(Scanner sc) {
         final int countGames = 3;
-        String startMessage = "What is the result of the expression?";
+
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
@@ -23,7 +23,7 @@ public class Calc {
             arrQuestion[i] = ranNumber1 + " " + sign + " " + ranNumber2;
             arrAnswer[i] = String.valueOf(resultNumber);
         }
-        runGame(sc, startMessage, arrQuestion, arrAnswer);
+        runGame(sc, STARTMESSAGE, arrQuestion, arrAnswer);
 
     }
 

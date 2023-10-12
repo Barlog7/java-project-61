@@ -8,12 +8,13 @@ import static hexlet.code.Engine.runGame;
 
 
 public class Progression {
+    private static final  String STARTMESSAGE = "What number is missing in the progression?";
     public static void game(Scanner sc) {
         final int countGames = 3;
         final int changeProgressionStepMax = 10;
         final int minLength = 5;
         final int maxLength = 5;
-        String startMessage =  "What number is missing in the progression?";
+
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
@@ -37,7 +38,7 @@ public class Progression {
             arrQuestion[i] = result.toString();
             arrAnswer[i] = String.valueOf(hidenumber);
         }
-        runGame(sc, startMessage, arrQuestion, arrAnswer);
+        runGame(sc, STARTMESSAGE, arrQuestion, arrAnswer);
 
     }
 

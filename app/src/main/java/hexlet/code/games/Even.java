@@ -6,10 +6,10 @@ import static hexlet.code.Engine.runGame;
 import static hexlet.code.Engine.getnumrandom;
 
 public class Even {
-
+    private static final  String STARTMESSAGE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     public static void game(Scanner sc) {
         final int countGames = 3;
-        String startMessage = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
@@ -17,7 +17,7 @@ public class Even {
             arrQuestion[i] = String.valueOf(numberQuestion);
             arrAnswer[i] = checkNumberEven(numberQuestion);
         }
-        runGame(sc, startMessage, arrQuestion, arrAnswer);
+        runGame(sc, STARTMESSAGE, arrQuestion, arrAnswer);
 
     }
 
