@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.Cli;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -23,13 +22,18 @@ public class Engine {
         for (int i = 0; i < countGames; i++) {
             String anser = arrAnswer[i];
             String textQestion = arrQuestion[i];
-            Engine.messageQ(textQestion);
-            Engine.messageA();
+            System.out.println(messegeQ + textQestion);
+            //Engine.messageQ(textQestion);
+            System.out.print(messegeA);
+            //Engine.messageA();
             String userAnser = sc.next().toLowerCase();
             if (anser.equals(userAnser)) {
-                Engine.messageCorr();
+                //Engine.messageCorr();
+                System.out.println(messegeCorr);
             } else {
-                Engine.messageErr(userAnser, anser, userName);
+                //Engine.messageErr(userAnser, anser, userName);
+                System.out.println("'" + userAnser + "' is wrong answer ;(. Correct answer was '" + anser + "'.\n"
+                        + "                    Let's try again, " + userName + "!");
                 return;
             }
         }
@@ -42,7 +46,7 @@ public class Engine {
 
 
 
-    public static void messageQ(String strMessage) {
+    /*public static void messageQ(String strMessage) {
         System.out.println(messegeQ + strMessage);
     }
     public static void messageA() {
@@ -54,7 +58,7 @@ public class Engine {
     public static void messageErr(String userAnser, String anser, String nameUser) {
         System.out.println("'" + userAnser + "' is wrong answer ;(. Correct answer was '" + anser + "'.\n"
                 + "                    Let's try again, " + nameUser + "!");
-    }
+    }*/
     public static int getnumrandom() {
         Random random = new Random();
         final int numberMax = 100;
