@@ -34,9 +34,7 @@ public class App {
         Scanner scannerApp = new Scanner(System.in);
         String userChoice = scannerApp.next();
         System.out.println(" ");
-        //String nameUser = "";
-        if (!userChoice.equals(sExit)) {
-
+               
             System.out.println("Welcome to the Brain Games!");
             switch (userChoice) {
                 case sGreet:
@@ -61,7 +59,7 @@ public class App {
                     break;
             }
 
-        }
+
 
         scannerApp.close();
 
