@@ -12,7 +12,7 @@ public class Engine {
     private static String messegeCorr = "Correct!";
 
 
-    public static void enganeGame(Scanner sc, String startText, String[] arrQuestion, String[] arrAnswer) {
+    public static void runGame(Scanner sc, String startText, String[] arrQuestion, String[] arrAnswer) {
         String userName = Cli.greetings(sc);
         System.out.println(startText);
         final int countGames = 3;

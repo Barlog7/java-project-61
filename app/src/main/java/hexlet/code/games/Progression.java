@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-import static hexlet.code.Engine.enganeGame;
+import static hexlet.code.Engine.runGame;
 
 
 public class Progression {
@@ -37,7 +37,7 @@ public class Progression {
             arrQuestion[i] = result.toString();
             arrAnswer[i] = String.valueOf(hidenumber);
         }
-        enganeGame(sc, startMessage, arrQuestion, arrAnswer);
+        runGame(sc, startMessage, arrQuestion, arrAnswer);
 
     }
 

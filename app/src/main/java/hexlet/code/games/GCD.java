@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-import static hexlet.code.Engine.enganeGame;
+import static hexlet.code.Engine.runGame;
 
 
 public class GCD {
@@ -22,7 +22,7 @@ public class GCD {
             arrQuestion[i] = ranNumber1 + " " + ranNumber2;
             arrAnswer[i] = String.valueOf(resultNumber);
         }
-        enganeGame(sc, startMessage, arrQuestion, arrAnswer);
+        runGame(sc, startMessage, arrQuestion, arrAnswer);
 
     }
 

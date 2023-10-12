@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-import static hexlet.code.Engine.enganeGame;
+import static hexlet.code.Engine.runGame;
 
 
 public class Prime {
@@ -19,7 +19,7 @@ public class Prime {
             arrQuestion[i] = String.valueOf(checkNumber);
             arrAnswer[i] = askSimple(checkNumber);
         }
-        enganeGame(sc, startMessage, arrQuestion, arrAnswer);
+        runGame(sc, startMessage, arrQuestion, arrAnswer);
 
     }
 

@@ -2,7 +2,7 @@ package hexlet.code.games;
 import java.util.Scanner;
 //import java.util.Random;
 
-import static hexlet.code.Engine.enganeGame;
+import static hexlet.code.Engine.runGame;
 import static hexlet.code.Engine.getnumrandom;
 
 public class Even {
@@ -17,7 +17,7 @@ public class Even {
             arrQuestion[i] = String.valueOf(numberQuestion);
             arrAnswer[i] = checkNumberEven(numberQuestion);
         }
-        enganeGame(sc, startMessage, arrQuestion, arrAnswer);
+        runGame(sc, startMessage, arrQuestion, arrAnswer);
 
     }
 

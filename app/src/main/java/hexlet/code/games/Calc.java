@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
-import static hexlet.code.Engine.enganeGame;
+import static hexlet.code.Engine.runGame;
 
 
 public class Calc {
@@ -23,7 +23,7 @@ public class Calc {
             arrQuestion[i] = ranNumber1 + " " + sign + " " + ranNumber2;
             arrAnswer[i] = String.valueOf(resultNumber);
         }
-        enganeGame(sc, startMessage, arrQuestion, arrAnswer);
+        runGame(sc, startMessage, arrQuestion, arrAnswer);
 
     }
 
