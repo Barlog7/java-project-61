@@ -34,30 +34,29 @@ public class App {
         Scanner scannerApp = new Scanner(System.in);
         String userChoice = scannerApp.next();
         System.out.println(" ");
-               
-            System.out.println("Welcome to the Brain Games!");
-            switch (userChoice) {
-                case sGreet:
-                    Cli.greetings(scannerApp);
-                    break;
-                case sEven :
-                    Even.game(scannerApp);
-                    break;
-                case sCalc :
-                    Calc.game(scannerApp);
-                    break;
-                case sGCD :
-                    GCD.game(scannerApp);
-                    break;
-                case sProgression :
-                    Progression.game(scannerApp);
-                    break;
-                case sPrime :
-                    Prime.game(scannerApp);
-                    break;
-                default:
-                    break;
-            }
+        System.out.println("Welcome to the Brain Games!");
+        switch (userChoice) {
+            case sGreet:
+                Cli.greetings(scannerApp);
+                break;
+            case sEven :
+                Even.game(scannerApp);
+                break;
+            case sCalc :
+                Calc.game(scannerApp);
+                break;
+            case sGCD :
+                GCD.game(scannerApp);
+                break;
+            case sProgression :
+                Progression.game(scannerApp);
+                break;
+            case sPrime :
+                Prime.game(scannerApp);
+                break;
+            default:
+                break;
+        }
 
 
 

@@ -1,12 +1,8 @@
 package hexlet.code;
 
 import hexlet.code.games.Cli;
-
-
 import java.util.Random;
 import java.util.Scanner;
-
-
 
 public class Engine {
 
