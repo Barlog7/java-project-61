@@ -19,7 +19,7 @@ public class Calc {
             int ranNumber1 = Utils.getNumRandom();
             int ranNumber2 = Utils.getNumRandom();
             String sign = getnumrandomSign();
-            int resultNumber = resultFormula(ranNumber1, ranNumber2, sign);
+            int resultNumber = calculate(ranNumber1, ranNumber2, sign);
             //arrQuestion[i] = ranNumber1 + " " + sign + " " + ranNumber2;
             //arrAnswer[i] = String.valueOf(resultNumber);
             arrQuestionAnswer[i][0] = ranNumber1 + " " + sign + " " + ranNumber2;
@@ -40,13 +40,26 @@ public class Calc {
             return "*";
         }
     }
-    public static int resultFormula(int number1, int number2, String sign) {
-        if (sign.equals("+")) {
+    public static int calculate(int number1, int number2, String sign) {
+/*        if (sign.equals("+")) {
             return number1 + number2;
         } else if (sign.equals("-")) {
             return number1 - number2;
         } else {
             return number1 * number2;
+        }*/
+        switch (sign) {
+            case "+":
+                return number1 + number2;
+            case  "-":
+                return number1 - number2;
+            case "*":
+                return number1 * number2;
+            default:
+                return 0;
+                /*throw new Exception("Для оператора " + sign +
+                        " не определена логика");*/
+
         }
     }
 
