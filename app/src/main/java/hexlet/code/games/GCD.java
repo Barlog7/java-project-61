@@ -1,7 +1,9 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 import java.util.Scanner;
+
 import static hexlet.code.Engine.runGame;
 
 
@@ -13,8 +15,8 @@ public class GCD {
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
-            int ranNumber1 = Engine.getnumrandom();
-            int ranNumber2 = Engine.getnumrandom();
+            int ranNumber1 = Utils.getNumRandom();
+            int ranNumber2 = Utils.getNumRandom();
 
             int resultNumber = getNod(ranNumber1, ranNumber2);
             arrQuestion[i] = ranNumber1 + " " + ranNumber2;

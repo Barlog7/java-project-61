@@ -1,10 +1,10 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
 import java.util.Scanner;
 
 import static hexlet.code.Engine.runGame;
+
+import hexlet.code.Utils;
 
 
 public class Progression {
@@ -19,10 +19,10 @@ public class Progression {
         String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
 
-            int startNumber = Engine.getnumrandom();
-            int progressionNumber = Engine.getnumrandom(changeProgressionStepMax);
-            int progressionLength = minLength + Engine.getnumrandom(maxLength);
-            int hidenumberPoz = Engine.getnumrandom(progressionLength);
+            int startNumber = Utils.getNumRandom();
+            int progressionNumber = Utils.getNumRandom(changeProgressionStepMax);
+            int progressionLength = minLength + Utils.getNumRandom(maxLength);
+            int hidenumberPoz = Utils.getNumRandom(progressionLength);
             int hidenumber = 0;
             var result = new StringBuilder();
             for (int j = 1; j <=  progressionLength; j++) {

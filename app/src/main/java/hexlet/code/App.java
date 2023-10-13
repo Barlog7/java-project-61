@@ -6,21 +6,18 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
-
-
 import java.util.Scanner;
 
 public class App {
+    public static final String NUMBER_GREET = "1";
+    public static final String NUMBER_EVEN = "2";
+    public static final String NUMBER_CALC = "3";
+    public static final String NUMBER_GCD = "4";
+    public static final String NUMBER_PROGRESSION = "5";
+    public static final String NUMBER_PRIME = "6";
 
     public static void main(String[] args) {
         String sExit = "0";
-
-        final String sGreet = "1";
-        final String sEven = "2";
-        final String sCalc = "3";
-        final String sGCD = "4";
-        final String sProgression = "5";
-        final String sPrime = "6";
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -36,29 +33,27 @@ public class App {
         System.out.println(" ");
         System.out.println("Welcome to the Brain Games!");
         switch (userChoice) {
-            case sGreet:
+            case NUMBER_GREET:
                 Cli.greetings();
                 break;
-            case sEven :
+            case NUMBER_EVEN:
                 Even.game(scannerApp);
                 break;
-            case sCalc :
+            case NUMBER_CALC:
                 Calc.game(scannerApp);
                 break;
-            case sGCD :
+            case NUMBER_GCD:
                 GCD.game(scannerApp);
                 break;
-            case sProgression :
+            case NUMBER_PROGRESSION:
                 Progression.game(scannerApp);
                 break;
-            case sPrime :
+            case NUMBER_PRIME:
                 Prime.game(scannerApp);
                 break;
             default:
                 break;
         }
-
-
 
         scannerApp.close();
 

@@ -1,9 +1,7 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
-import java.util.Random;
 import java.util.Scanner;
+import hexlet.code.Utils;
 
 import static hexlet.code.Engine.runGame;
 
@@ -16,8 +14,8 @@ public class Calc {
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
-            int ranNumber1 = Engine.getnumrandom();
-            int ranNumber2 = Engine.getnumrandom();
+            int ranNumber1 = Utils.getNumRandom();
+            int ranNumber2 = Utils.getNumRandom();
             String sign = getnumrandomSign();
             int resultNumber = resultFormula(ranNumber1, ranNumber2, sign);
             arrQuestion[i] = ranNumber1 + " " + sign + " " + ranNumber2;
@@ -27,11 +25,9 @@ public class Calc {
 
     }
 
-
     public static String getnumrandomSign() {
-        Random random = new Random();
         final int countSign = 3;
-        int ranNumber = random.nextInt(countSign);
+        int ranNumber = Utils.getNumRandom(countSign);
         if (ranNumber == 0) {
             return "+";
         } else if (ranNumber == 1) {

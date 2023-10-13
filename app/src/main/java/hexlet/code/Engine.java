@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
@@ -59,15 +58,15 @@ public class Engine {
         System.out.println("'" + userAnser + "' is wrong answer ;(. Correct answer was '" + anser + "'.\n"
                 + "                    Let's try again, " + nameUser + "!");
     }*/
-    public static int getnumrandom() {
+    /*public static int getNumRrandom() {
         Random random = new Random();
         final int numberMax = 100;
         int ranNumber = random.nextInt(numberMax);
         return ranNumber;
     }
-    public static int getnumrandom(int maxnamber) {
+    public static int getNumRrandom(int maxnamber) {
         Random random = new Random();
         int ranNumber = random.nextInt(maxnamber) + 1;
         return ranNumber;
-    }
+    }*/
 }

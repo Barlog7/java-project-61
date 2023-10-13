@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class Prime {
         String[] arrQuestion = new String[countGames];
         String[] arrAnswer = new String[countGames];
         for (int i = 0; i < arrQuestion.length; i++) {
-            int checkNumber = Engine.getnumrandom();
+            int checkNumber = Utils.getNumRandom();
 
             arrQuestion[i] = String.valueOf(checkNumber);
             arrAnswer[i] = askSimple(checkNumber);
@@ -23,7 +23,6 @@ public class Prime {
         runGame(sc, STARTMESSAGE, arrQuestion, arrAnswer);
 
     }
-
 
     public static String askSimple(Integer number) {
         if (number < 2) {
