@@ -53,10 +53,9 @@ public class Calc {
                 return number1 + number2;
             case  "-":
                 return number1 - number2;
-            case "*":
-                return number1 * number2;
             default:
-                return 0;
+                return number1 * number2;
+
                 /*throw new Exception("Для оператора " + sign +
                         " не определена логика");*/
 
