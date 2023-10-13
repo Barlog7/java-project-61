@@ -11,13 +11,15 @@ public class Progression {
     private static final  String STARTMESSAGE = "What number is missing in the progression?";
     public static void game(Scanner sc) {
         final int countGames = 3;
+        final int countArrayColumn = 2;
         final int changeProgressionStepMax = 10;
         final int minLength = 5;
         final int maxLength = 5;
 
-        String[] arrQuestion = new String[countGames];
-        String[] arrAnswer = new String[countGames];
-        for (int i = 0; i < arrQuestion.length; i++) {
+        //String[] arrQuestion = new String[countGames];
+        //String[] arrAnswer = new String[countGames];
+        String[][] arrQuestionAnswer = new String[countGames][countArrayColumn];
+        for (int i = 0; i < arrQuestionAnswer.length; i++) {
 
             int startNumber = Utils.getNumRandom();
             int progressionNumber = Utils.getNumRandom(changeProgressionStepMax);
@@ -35,10 +37,12 @@ public class Progression {
                 startNumber += progressionNumber;
             }
 
-            arrQuestion[i] = result.toString();
-            arrAnswer[i] = String.valueOf(hidenumber);
+            //arrQuestion[i] = result.toString();
+            //arrAnswer[i] = String.valueOf(hidenumber);
+            arrQuestionAnswer[i][0] = result.toString();
+            arrQuestionAnswer[i][1] =  String.valueOf(hidenumber);
         }
-        runGame(sc, STARTMESSAGE, arrQuestion, arrAnswer);
+        runGame(sc, STARTMESSAGE, arrQuestionAnswer);
 
     }
 

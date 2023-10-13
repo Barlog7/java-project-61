@@ -10,18 +10,22 @@ public class Calc {
     private static final  String STARTMESSAGE = "What is the result of the expression?";
     public static void game(Scanner sc) {
         final int countGames = 3;
+        final int countArrayColumn = 2;
 
-        String[] arrQuestion = new String[countGames];
-        String[] arrAnswer = new String[countGames];
-        for (int i = 0; i < arrQuestion.length; i++) {
+        //String[] arrQuestion = new String[countGames];
+        //String[] arrAnswer = new String[countGames];
+        String[][] arrQuestionAnswer = new String[countGames][countArrayColumn];
+        for (int i = 0; i < arrQuestionAnswer.length; i++) {
             int ranNumber1 = Utils.getNumRandom();
             int ranNumber2 = Utils.getNumRandom();
             String sign = getnumrandomSign();
             int resultNumber = resultFormula(ranNumber1, ranNumber2, sign);
-            arrQuestion[i] = ranNumber1 + " " + sign + " " + ranNumber2;
-            arrAnswer[i] = String.valueOf(resultNumber);
+            //arrQuestion[i] = ranNumber1 + " " + sign + " " + ranNumber2;
+            //arrAnswer[i] = String.valueOf(resultNumber);
+            arrQuestionAnswer[i][0] = ranNumber1 + " " + sign + " " + ranNumber2;
+            arrQuestionAnswer[i][1] = String.valueOf(resultNumber);
         }
-        runGame(sc, STARTMESSAGE, arrQuestion, arrAnswer);
+        runGame(sc, STARTMESSAGE, arrQuestionAnswer);
 
     }
 

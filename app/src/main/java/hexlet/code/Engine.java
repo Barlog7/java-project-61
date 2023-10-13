@@ -10,7 +10,7 @@ public class Engine {
     private static String messegeCorr = "Correct!";
 
 
-    public static void runGame(Scanner sc, String startText, String[] arrQuestion, String[] arrAnswer) {
+    public static void runGame(Scanner sc, String startText, String[][] arrQuestionAnswer) {
         //String userName = Cli.greetings(sc);
         System.out.print("May I have your name? ");
         String userName = sc.next();
@@ -19,8 +19,8 @@ public class Engine {
         System.out.println(startText);
         final int countGames = 3;
         for (int i = 0; i < countGames; i++) {
-            String anser = arrAnswer[i];
-            String textQestion = arrQuestion[i];
+            String anser = arrQuestionAnswer[i][1];
+            String textQestion = arrQuestionAnswer[i][0];
             System.out.println(messegeQ + textQestion);
             //Engine.messageQ(textQestion);
             System.out.print(messegeA);
