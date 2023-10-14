@@ -51,7 +51,6 @@ public class Calc {
                 return number1 * number2;
             default:
                 throw new RuntimeException("Для оператора " + sign + " не определена логика");
-                
         }
     }
 
