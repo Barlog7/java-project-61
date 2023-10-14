@@ -16,11 +16,8 @@ public class Progression {
         final int minLength = 5;
         final int maxLength = 5;
 
-        //String[] arrQuestion = new String[countGames];
-        //String[] arrAnswer = new String[countGames];
         String[][] arrQuestionAnswer = new String[countGames][countArrayColumn];
         for (int i = 0; i < arrQuestionAnswer.length; i++) {
-
             int startNumber = Utils.getNumRandom();
             int progressionNumber = Utils.getNumRandom(changeProgressionStepMax);
             int progressionLength = minLength + Utils.getNumRandom(maxLength);
@@ -36,9 +33,6 @@ public class Progression {
                 }
                 startNumber += progressionNumber;
             }
-
-            //arrQuestion[i] = result.toString();
-            //arrAnswer[i] = String.valueOf(hidenumber);
             arrQuestionAnswer[i][0] = result.toString();
             arrQuestionAnswer[i][1] =  String.valueOf(hidenumber);
         }
