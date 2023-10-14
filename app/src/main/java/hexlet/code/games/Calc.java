@@ -41,20 +41,16 @@ public class Calc {
         }
     }
     public static int calculate(int number1, int number2, String sign) {
-/*        if (sign.equals("+")) {
-            return number1 + number2;
-        } else if (sign.equals("-")) {
-            return number1 - number2;
-        } else {
-            return number1 * number2;
-        }*/
+
         switch (sign) {
             case "+":
                 return number1 + number2;
             case  "-":
                 return number1 - number2;
-            default:
+            case "*":
                 return number1 * number2;
+            default:
+                throw new RuntimeException("Для оператора " + sign + " не определена логика");
 
                 /*throw new Exception("Для оператора " + sign +
                         " не определена логика");*/
