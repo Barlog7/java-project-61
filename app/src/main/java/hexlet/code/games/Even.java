@@ -15,17 +15,17 @@ public class Even {
         for (int i = 0; i < arrQuestionAnswer.length; i++) {
             int numberQuestion = Utils.getNumRandom();
             arrQuestionAnswer[i][0] = String.valueOf(numberQuestion);
-            arrQuestionAnswer[i][1] = checkNumberEven(numberQuestion);
+            arrQuestionAnswer[i][1] =  checkNumberEven(numberQuestion) ? "yes" : "no";
         }
         runGame(sc, STARTMESSAGE, arrQuestionAnswer);
 
     }
 
-    public static String checkNumberEven(int number) {
+    public static boolean checkNumberEven(int number) {
         if (number % 2 == 0) {
-            return "yes";
+            return true;
         } else {
-            return "no";
+            return false;
         }
     }
 
