@@ -14,22 +14,22 @@ public class Prime {
         for (int i = 0; i < arrQuestionAnswer.length; i++) {
             int checkNumber = Utils.getNumRandom();
             arrQuestionAnswer[i][0] = String.valueOf(checkNumber);
-            arrQuestionAnswer[i][1] = askSimple(checkNumber);
+            arrQuestionAnswer[i][1] = isPrime(checkNumber) ? "yes" : "no";
         }
         runGame(sc, STARTMESSAGE, arrQuestionAnswer);
 
     }
 
-    public static String askSimple(Integer number) {
+    public static boolean isPrime(Integer number) {
         if (number < 2) {
-            return "no";
+            return false;
         }
-        for (int i = 2; i < number; i++) {
+        for (int i = 2; i <= number / 2; i++) {
             if (number % i == 0) {
-                return "no";
+                return false;
             }
         }
-        return "yes";
+        return true;
     }
 
 }
