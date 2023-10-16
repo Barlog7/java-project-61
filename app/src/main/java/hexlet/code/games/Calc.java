@@ -9,6 +9,7 @@ import static hexlet.code.Engine.runGame;
 
 
 public class Calc {
+    private static String[] arrSign = {"+", "-", "*"};
     private static final  String STARTMESSAGE = "What is the result of the expression?";
     public static void play(Scanner sc) {
         String[][] arrQuestionAnswer = new String[Engine.COUNTGAMES][Engine.COUNTARRAYCOLUMN];
@@ -27,13 +28,7 @@ public class Calc {
     public static String getnumrandomSign() {
         final int countSign = 3;
         int ranNumber = Utils.getNumRandom(countSign);
-        if (ranNumber == 0) {
-            return "+";
-        } else if (ranNumber == 1) {
-            return "-";
-        } else {
-            return "*";
-        }
+        return arrSign[ranNumber];
     }
     public static int calculate(int number1, int number2, String sign) {
 
