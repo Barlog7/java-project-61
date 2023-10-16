@@ -16,7 +16,6 @@ public class App {
     public static final String NUMBER_PRIME = "6";
 
     public static void main(String[] args) {
-        String sExit = "0";
         System.out.println("Please enter the play number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");

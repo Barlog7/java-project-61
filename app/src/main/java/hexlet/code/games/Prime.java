@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 import static hexlet.code.Engine.runGame;
 
-
 public class Prime {
     private static final  String STARTMESSAGE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static void play(Scanner sc) {
