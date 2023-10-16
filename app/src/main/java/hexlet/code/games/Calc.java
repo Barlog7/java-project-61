@@ -28,7 +28,7 @@ public class Calc {
     public static String getnumrandomSign() {
         final int countSign = 3;
         int ranNumber = Utils.getNumRandom(countSign);
-        return arrSign[ranNumber];
+        return arrSign[ranNumber-1];
     }
     public static int calculate(int number1, int number2, String sign) {
 
