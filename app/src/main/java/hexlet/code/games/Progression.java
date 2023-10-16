@@ -23,21 +23,24 @@ public class Progression {
             int progressionLength = minLength + Utils.getNumRandom(maxLength);
             int hidenumberPoz = Utils.getNumRandom(progressionLength);
             int hidenumber = 0;
-            var result = new StringBuilder();
-            for (int j = 1; j <=  progressionLength; j++) {
-                if (j == hidenumberPoz) {
-                    result.append(".. ");
-                    hidenumber = startNumber;
-                } else {
-                    result.append(startNumber + " ");
-                }
-                startNumber += progressionNumber;
-            }
-            arrQuestionAnswer[i][0] = result.toString();
+            String[] arrProgression = createProgression(startNumber, progressionNumber, progressionLength);
+            hidenumber = Integer.parseInt(arrProgression[hidenumberPoz - 1]);
+            arrProgression[hidenumberPoz - 1] = "..";
+            String anser = String.join(" ", arrProgression);
+
+            arrQuestionAnswer[i][0] = anser;
             arrQuestionAnswer[i][1] =  String.valueOf(hidenumber);
         }
         runGame(sc, STARTMESSAGE, arrQuestionAnswer);
 
+    }
+    public static String[] createProgression(int startNumber, int progressionNumber, int progressionLength) {
+        String[] arrProgression = new String[progressionLength];
+        for (int j = 0; j < progressionLength; j++) {
+            arrProgression[j] = String.valueOf(startNumber);
+            startNumber += progressionNumber;
+        }
+        return arrProgression;
     }
 
 
