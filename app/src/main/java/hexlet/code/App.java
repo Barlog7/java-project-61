@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.Cli;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
@@ -18,7 +17,7 @@ public class App {
 
     public static void main(String[] args) {
         String sExit = "0";
-        System.out.println("Please enter the game number and press Enter.");
+        System.out.println("Please enter the play number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
@@ -36,19 +35,19 @@ public class App {
                 Cli.greetings();
                 break;
             case NUMBER_EVEN:
-                Even.game(scannerApp);
+                Even.play(scannerApp);
                 break;
             case NUMBER_CALC:
-                Calc.game(scannerApp);
+                Calc.play(scannerApp);
                 break;
             case NUMBER_GCD:
-                GCD.game(scannerApp);
+                GCD.play(scannerApp);
                 break;
             case NUMBER_PROGRESSION:
-                Progression.game(scannerApp);
+                Progression.play(scannerApp);
                 break;
             case NUMBER_PRIME:
-                Prime.game(scannerApp);
+                Prime.play(scannerApp);
                 break;
             default:
                 break;

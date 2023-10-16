@@ -8,7 +8,7 @@ import hexlet.code.Utils;
 
 public class Even {
     private static final  String STARTMESSAGE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    public static void game(Scanner sc) {
+    public static void play(Scanner sc) {
         final int countGames = 3;
         final int countArrayColumn = 2;
 

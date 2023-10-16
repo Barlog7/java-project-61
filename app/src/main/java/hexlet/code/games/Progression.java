@@ -9,7 +9,7 @@ import hexlet.code.Utils;
 
 public class Progression {
     private static final  String STARTMESSAGE = "What number is missing in the progression?";
-    public static void game(Scanner sc) {
+    public static void play(Scanner sc) {
         final int countGames = 3;
         final int countArrayColumn = 2;
         final int changeProgressionStepMax = 10;

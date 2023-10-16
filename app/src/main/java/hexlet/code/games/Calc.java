@@ -8,7 +8,7 @@ import static hexlet.code.Engine.runGame;
 
 public class Calc {
     private static final  String STARTMESSAGE = "What is the result of the expression?";
-    public static void game(Scanner sc) {
+    public static void play(Scanner sc) {
         final int countGames = 3;
         final int countArrayColumn = 2;
 
