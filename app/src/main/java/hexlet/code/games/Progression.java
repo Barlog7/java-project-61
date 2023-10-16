@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 import static hexlet.code.Engine.runGame;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 
 public class Progression {
     private static final  String STARTMESSAGE = "What number is missing in the progression?";
     public static void play(Scanner sc) {
-        final int countGames = 3;
-        final int countArrayColumn = 2;
+
         final int changeProgressionStepMax = 10;
         final int minLength = 5;
         final int maxLength = 5;
 
-        String[][] arrQuestionAnswer = new String[countGames][countArrayColumn];
+        String[][] arrQuestionAnswer = new String[Engine.COUNTGAMES][Engine.COUNTARRAYCOLUMN];
         for (int i = 0; i < arrQuestionAnswer.length; i++) {
             int startNumber = Utils.getNumRandom();
             int progressionNumber = Utils.getNumRandom(changeProgressionStepMax);

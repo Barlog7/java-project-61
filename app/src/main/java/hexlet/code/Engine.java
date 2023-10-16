@@ -7,7 +7,8 @@ public class Engine {
     private static String messegeQ = "Question: ";
     private static String messegeA = "Your answer: ";
     private static String messegeCorr = "Correct!";
-
+    public static final int COUNTGAMES = 3;
+    public static final int COUNTARRAYCOLUMN = 2;
 
     public static void runGame(Scanner sc, String startText, String[][] arrQuestionAnswer) {
         System.out.print("May I have your name? ");
