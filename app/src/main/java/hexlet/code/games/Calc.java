@@ -16,7 +16,7 @@ public class Calc {
         for (int i = 0; i < arrQuestionAnswer.length; i++) {
             int ranNumber1 = Utils.getNumRandom();
             int ranNumber2 = Utils.getNumRandom();
-            String sign = getnumrandomSign();
+            String sign = getRandomSign();
             int resultNumber = calculate(ranNumber1, ranNumber2, sign);
             arrQuestionAnswer[i][0] = ranNumber1 + " " + sign + " " + ranNumber2;
             arrQuestionAnswer[i][1] = String.valueOf(resultNumber);
@@ -25,8 +25,8 @@ public class Calc {
 
     }
 
-    public static String getnumrandomSign() {
-        final int countSign = 3;
+    public static String getRandomSign() {
+        int countSign = arrSign.length;
         int ranNumber = Utils.getNumRandom(countSign);
         return arrSign[ranNumber - 1];
     }
