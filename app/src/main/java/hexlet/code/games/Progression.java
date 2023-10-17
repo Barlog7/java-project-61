@@ -23,21 +23,28 @@ public class Progression {
             int progressionLength = minLength + Utils.getNumRandom(maxLength);
             int hidenumberPoz = Utils.getNumRandom(progressionLength);
             int hidenumber = 0;
-            String[] arrProgression = createProgression(startNumber, progressionNumber, progressionLength);
-            hidenumber = Integer.parseInt(arrProgression[hidenumberPoz - 1]);
-            arrProgression[hidenumberPoz - 1] = "..";
-            String anser = String.join(" ", arrProgression);
-
+            int[] arrProgression = createProgression(startNumber, progressionNumber, progressionLength);
+            hidenumber = arrProgression[hidenumberPoz - 1];
+            String anser = bildStringProgression(arrProgression, hidenumberPoz);
             arrQuestionAnswer[i][0] = anser;
             arrQuestionAnswer[i][1] =  String.valueOf(hidenumber);
         }
         runGame(sc, STARTMESSAGE, arrQuestionAnswer);
 
     }
-    public static String[] createProgression(int startNumber, int progressionNumber, int progressionLength) {
-        String[] arrProgression = new String[progressionLength];
+    public static String bildStringProgression(int[] arrProgression, int hidenumberPoz) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < arrProgression.length; i++) {
+            String elementProgression = i == (hidenumberPoz - 1) ? ".. " : arrProgression[i] + " ";
+            result.append(elementProgression);
+        }
+        return result.toString();
+    }
+
+    public static int[] createProgression(int startNumber, int progressionNumber, int progressionLength) {
+        int[] arrProgression = new int[progressionLength];
         for (int j = 0; j < progressionLength; j++) {
-            arrProgression[j] = String.valueOf(startNumber);
+            arrProgression[j] = startNumber;
             startNumber += progressionNumber;
         }
         return arrProgression;
